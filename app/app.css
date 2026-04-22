@@ -150,3 +150,39 @@ form {
     opacity: 1;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@utility animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.landing-page {
+    background: radial-gradient(circle at top right, #f8faff, transparent),
+                radial-gradient(circle at bottom left, #f0f7ff, transparent);
+}
